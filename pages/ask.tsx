@@ -3,12 +3,12 @@ import type { NextPage } from "next";
 import { withLayout } from "../layout/Layout";
 import { Main } from "../layout/Main/Main";
 
-const Home: NextPage = (): JSX.Element => {
+const Ask: NextPage = (): JSX.Element => {
   return (
     <>
-      <Main type='new' />
+      <Main type='ask' />
     </>
   );
 };
 
-export default withLayout(Home);
+export default withLayout(Ask);

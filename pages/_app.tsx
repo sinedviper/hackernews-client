@@ -1,8 +1,34 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+/* eslint-disable @next/next/no-page-custom-font */
+import { AppProps } from "next/app";
+import Head from "next/head";
+import { Provider } from "react-redux";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+import { store } from "../store";
+
+import "../styles/globals.css";
+
+function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
+  return (
+    <>
+      <Head>
+        <title>HackerNews</title>
+        <link rel='icon' href='/favicon.ico' />
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link
+          href='https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&display=swap'
+          rel='stylesheet'
+        />
+        <meta
+          property='og:url'
+          content={process.env.NEXT_PUBLIC_DOMAIN + router.asPath}
+        />
+        <meta property='og:locale' content='en_EN' />
+      </Head>
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
+    </>
+  );
 }
 
-export default MyApp
+export default MyApp;

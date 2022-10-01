@@ -1,0 +1,66 @@
+.header {
+  width: 100%;
+  display: flex;
+  background-color: #007242;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 25px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.nav {
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+}
+
+.nav hr {
+  border: 1px solid black;
+  height: 25px;
+}
+
+.nav a {
+  display: block;
+  padding: 0 20px;
+  transition: all 0.3s;
+}
+
+.nav a:hover {
+  transform: scale(1.15);
+}
+
+@media screen and (max-width: 700px) {
+  .header {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .header h1 {
+    margin: 0;
+    width: auto;
+    padding-top: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    gap: 0;
+  }
+  .nav {
+    padding: 20px 0;
+    flex-direction: column;
+  }
+
+  .nav a {
+    padding: 10px 0;
+  }
+
+  .nav hr {
+    height: 0;
+    width: 100px;
+  }
+}

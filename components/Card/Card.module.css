@@ -1,0 +1,49 @@
+.card {
+  background-color: #007242;
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px auto 0;
+  color: #d2fadf;
+  cursor: pointer;
+}
+
+.title {
+  padding-bottom: 10px;
+}
+
+.foot {
+  display: grid;
+  grid-template-columns: auto auto auto 1fr;
+}
+
+.by,
+.time,
+.point,
+.comments {
+  color: #4aa772;
+  display: block;
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 550px) {
+  .foot {
+    grid-template-columns: auto 1fr;
+  }
+
+  .point,
+  .comments {
+    padding-top: 10px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .foot {
+    grid-template-columns: 1fr;
+  }
+
+  .by,
+  .time {
+    padding-top: 10px;
+  }
+}
