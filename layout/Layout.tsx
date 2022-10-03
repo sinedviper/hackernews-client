@@ -1,5 +1,4 @@
 import { FunctionComponent, useRef } from "react";
-import cn from "classnames";
 
 import { LayoutProps } from "./Layout.props";
 import { Header } from "./Header/Header";
@@ -10,13 +9,15 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
   const bodyRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div className={styles.wrapper}>
-      <Header className={styles.header} />
-      <main className={styles.body} ref={bodyRef} tabIndex={0} role='main'>
-        {children}
-      </main>
+    <>
+      <div className={styles.wrapper}>
+        <Header className={styles.header} />
+        <main className={styles.body} ref={bodyRef} tabIndex={0} role='main'>
+          {children}
+        </main>
+      </div>
       <Footer className={styles.footer} />
-    </div>
+    </>
   );
 };
 

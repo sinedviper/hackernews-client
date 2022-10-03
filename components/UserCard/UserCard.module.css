@@ -1,0 +1,16 @@
+.card {
+  background-color: #007242;
+  margin: 20px auto 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 5px;
+  padding: 20px;
+  color: #d2fadf;
+  gap: 10px;
+}
+
+.load {
+  padding-top: 50px;
+}

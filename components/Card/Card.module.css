@@ -1,20 +1,35 @@
 .card {
   background-color: #007242;
-  max-width: 800px;
+  max-width: 1200px;
   padding: 20px;
   border-radius: 5px;
   margin: 20px auto 0;
   color: #d2fadf;
-  cursor: pointer;
 }
 
 .title {
   padding-bottom: 10px;
+  word-wrap: break-word;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.title:hover {
+  color: black;
 }
 
 .foot {
   display: grid;
   grid-template-columns: auto auto auto 1fr;
+}
+.by {
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 700;
+}
+
+.by:hover {
+  color: black;
 }
 
 .by,

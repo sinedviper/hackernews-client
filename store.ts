@@ -4,16 +4,24 @@ import {
   configureStore,
   ThunkAction,
 } from "@reduxjs/toolkit";
+import { commentsReducer } from "./features";
 
-import { pagesReducer } from "./features/pages/pagesSlice";
+import { cardsReducer } from "./features/cards/cardsSlice";
+import { userReducer } from "./features/users/userSlice";
 
 const rootReducer = combineReducers({
-  pages: pagesReducer,
+  cards: cardsReducer,
+  user: userReducer,
+  comments: commentsReducer,
 });
 
 export const store = configureStore({
   reducer: rootReducer,
   devTools: true,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }),
 });
 
 export type AppState = ReturnType<typeof store.getState>;

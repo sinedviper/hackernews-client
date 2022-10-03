@@ -5,6 +5,7 @@
   padding: 10px 20px;
   justify-content: center;
   align-items: center;
+  color: #d2fadf;
 }
 
 .header h1 {
@@ -20,7 +21,7 @@
 }
 
 .nav hr {
-  border: 1px solid black;
+  border: 1px solid #d2fadf;
   height: 25px;
 }
 

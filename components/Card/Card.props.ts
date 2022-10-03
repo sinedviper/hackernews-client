@@ -3,5 +3,5 @@ import { Data } from "../../interfaces/pages-interface";
 
 export interface CardProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  list: Data;
+  cards: Data;
 }

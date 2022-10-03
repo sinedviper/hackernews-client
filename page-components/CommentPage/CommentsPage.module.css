@@ -1,0 +1,11 @@
+.load {
+  padding-top: 50px;
+}
+
+.wrapper {
+  border-radius: 5px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto 0;
+  color: black;
+}

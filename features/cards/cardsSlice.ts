@@ -2,30 +2,42 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 import { getStories } from "../../utils/apis";
 import type { AppState } from "../../store";
+import { Data } from "../../interfaces/pages-interface";
 
 export const loadPages = createAsyncThunk(
-  "@@pages/pages-load",
+  "@@cards/cards-load",
   async (type: string) => {
-    return await getStories(type);
+    const cards = await getStories(type);
+    return cards;
   }
 );
 
-interface PagesState {
+interface CardsState {
   status: string;
   error: string | null;
-  list: any;
+  cards: any;
+  card: Data | null;
 }
 
-const initialState: PagesState = {
+const initialState: CardsState = {
   status: "idle",
   error: "",
-  list: [],
+  cards: [],
+  card: null,
 };
 
-const pagesSlice = createSlice({
-  name: "pages",
+const cardsSlice = createSlice({
+  name: "cards",
   initialState,
-  reducers: {},
+  reducers: {
+    actionCardId: (state, action) => {
+      state.cards.map((val: Data) => {
+        if (val.id == action.payload) {
+          state.card = val;
+        }
+      });
+    },
+  },
   extraReducers: (build) => {
     build
       .addCase(loadPages.pending, (state) => {
@@ -38,11 +50,13 @@ const pagesSlice = createSlice({
       })
       .addCase(loadPages.fulfilled, (state, action) => {
         state.status = "received";
-        state.list = action.payload;
+        state.cards = action.payload;
       });
   },
 });
 
-export const selectPages = (state: AppState) => state.pages;
+export const { actionCardId } = cardsSlice.actions;
 
-export const pagesReducer = pagesSlice.reducer;
+export const selectCards = (state: AppState) => state.cards;
+
+export const cardsReducer = cardsSlice.reducer;

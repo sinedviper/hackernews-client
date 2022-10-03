@@ -1,12 +1,12 @@
 import type { NextPage } from "next";
 
 import { withLayout } from "../layout/Layout";
-import { Main } from "../layout/Main/Main";
+import { CardsPage } from "../page-components";
 
 const Ask: NextPage = (): JSX.Element => {
   return (
     <>
-      <Main type='ask' />
+      <CardsPage type='ask' />
     </>
   );
 };

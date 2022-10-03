@@ -1,6 +1,7 @@
+import { Comments } from "./../../interfaces/pages-interface";
 import { DetailedHTMLProps, HTMLAttributes } from "react";
 
-export interface MainProps
+export interface CommentCardProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  type: string;
+  comments: Comments;
 }

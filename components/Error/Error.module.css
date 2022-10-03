@@ -1,0 +1,23 @@
+.error {
+  padding: 20px;
+  margin: 20px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.error svg {
+  width: 65px;
+}
+
+.error h2 {
+  display: block;
+  color: #007242;
+}
+
+@media screen and (max-width: 390px) {
+  .error {
+    flex-direction: column;
+  }
+}

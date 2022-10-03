@@ -6,6 +6,24 @@ export interface Data {
   time: number;
   title: string;
   type: string;
-  url: string;
+  url?: string;
   kids?: number[];
+  text?: string;
+}
+
+export interface User {
+  created: number;
+  id: string;
+  karma: number;
+  submitted?: number[];
+}
+
+export interface Comments {
+  time: number;
+  text: string;
+  id: number;
+  by: string;
+  type: string;
+  parent: number;
+  kids?: Comments[];
 }
