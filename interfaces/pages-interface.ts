@@ -9,6 +9,7 @@ export interface Data {
   url?: string;
   kids?: number[];
   text?: string;
+  dead?: boolean;
 }
 
 export interface User {
@@ -16,6 +17,7 @@ export interface User {
   id: string;
   karma: number;
   submitted?: number[];
+  about?: string;
 }
 
 export interface Comments {
@@ -26,4 +28,5 @@ export interface Comments {
   type: string;
   parent: number;
   kids?: Comments[];
+  deleted?: boolean;
 }

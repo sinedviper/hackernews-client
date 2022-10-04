@@ -1,3 +1,22 @@
 .wrapper {
   min-height: calc(100vh - 60px);
 }
+
+.up {
+  display: block;
+  position: fixed;
+  bottom: 75px;
+  right: 300px;
+  padding: 10px;
+  border-radius: 50%;
+  border: 1px solid #d2fadf;
+  background-color: #007242;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1800px) {
+  .up {
+    right: 75px;
+  }
+}

@@ -1,16 +1,32 @@
 .card {
   background-color: #007242;
   margin: 20px auto 0;
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
   width: 100%;
   max-width: 1200px;
   border-radius: 5px;
   padding: 20px;
   color: #d2fadf;
+  gap: 20px;
+  justify-content: baseline;
+}
+
+.main {
+  display: grid;
   gap: 10px;
+  grid-template-columns: 1fr;
+}
+
+.aboute {
+  word-wrap: break-word;
 }
 
 .load {
   padding-top: 50px;
+}
+
+@media screen and (max-width: 500px) {
+  .card {
+    flex-direction: column;
+  }
 }

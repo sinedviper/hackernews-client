@@ -5,12 +5,14 @@ import {
   ThunkAction,
 } from "@reduxjs/toolkit";
 import { commentsReducer } from "./features";
+import { cardReducer } from "./features/card/cardSlice";
 
 import { cardsReducer } from "./features/cards/cardsSlice";
 import { userReducer } from "./features/users/userSlice";
 
 const rootReducer = combineReducers({
   cards: cardsReducer,
+  card: cardReducer,
   user: userReducer,
   comments: commentsReducer,
 });

@@ -7,6 +7,31 @@
   color: #d2fadf;
 }
 
+.close {
+  display: none;
+}
+
+.open {
+  display: block;
+}
+
+.button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.titleWrapper {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.time {
+  font-size: 13px;
+  color: #4aa772;
+}
+
 .title {
   font-size: 17px;
   color: black;
@@ -17,13 +42,26 @@
   padding-left: 5px;
   text-align: justify;
   font-size: 15px;
+  word-wrap: break-word;
 }
 
 .textMark a {
   color: black;
   word-wrap: break-word;
+  transition: all 0.3s;
+}
+.textMark a:hover {
+  color: #4aa772;
 }
 
 .textMark li {
   list-style-type: none;
+}
+
+@media screen and (max-width: 350px) {
+  .titleWrapper {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 5px;
+  }
 }

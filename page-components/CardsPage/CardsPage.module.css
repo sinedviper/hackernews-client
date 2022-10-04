@@ -5,3 +5,23 @@
 .load {
   padding-top: 50px;
 }
+
+.button {
+  margin: 20px auto 0;
+  display: block;
+  border: 1px solid #007242;
+  padding: 10px 50px;
+  border-radius: 5px;
+  background-color: #007242;
+  color: #d2fadf;
+  transition: all 0.3s;
+}
+
+.button:hover {
+  color: #007242;
+  background-color: #d2fadf;
+}
+
+.buttonNone {
+  display: none;
+}

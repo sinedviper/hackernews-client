@@ -12,22 +12,22 @@ import { Error404 } from "../../pages/404";
 import LoadSvg from "./Load.svg";
 
 import styles from "./UserPage.module.css";
+import { CommentsPage } from "../CommentPage/CommentsPage";
 
 export const UserPage = ({
   className,
   ...props
 }: UserPageProps): JSX.Element => {
-  const dispatch = useAppDispatch();
   const router = useRouter();
-
   const { usersid } = router.query;
+  const dispatch = useAppDispatch();
   const { user, status } = useAppSelector(selectUser);
 
   useEffect(() => {
     dispatch(loadUser(String(usersid)));
-  }, []);
+  }, [usersid]);
 
-  if (!user) {
+  if (!usersid) {
     return <Error404 />;
   }
 
@@ -36,7 +36,12 @@ export const UserPage = ({
       {status !== "received" ? (
         <LoadSvg className={styles.load} />
       ) : (
-        <UserCard user={user} />
+        user && (
+          <>
+            <UserCard user={user} />
+            <CommentsPage card={user} />
+          </>
+        )
       )}
     </div>
   );
