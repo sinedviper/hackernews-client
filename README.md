@@ -1,34 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Hackernews-Client
 
-## Getting Started
+### :pushpin: About project
+<p align="justify">In this project, I implemented a news site based on next, I also used the api provided by Hackenews, all data is immediately loaded into the store, and for this I use redax thunk and axios. There is a news feed, a general page with comments, as well as a download of the latest comments.</p>
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### :book: Libraries
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- next
+- reduxjs/toolkit
+- classnames
+- axios
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### :pizza: Commands
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- npm run dev: <strong>run in development mode</strong>
+- npm run build: <strong>assemble the project</strong>
+- npm run production:<strong>run the built project</strong>
+---
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<div id="badges" align="center">  
+<a href="https://www.linkedin.com/in/sinedviper"> 
+<img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/> 
+</a> 
+<a href="https://www.instagram.com/sinedviper"> 
+<img src="https://img.shields.io/badge/Instagram-orange?style=for-the-badge&logo=instagram&logoColor=white" alt="Twitter Badge"/> 
+</a>
+<a href="https://www.t.me/sinedviper"> 
+<img src="https://img.shields.io/badge/Telegram-purple?style=for-the-badge&logo=telegram&logoColor=white" alt="Twitter Badge"/> 
+</a>
+</div>
